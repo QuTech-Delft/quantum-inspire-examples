@@ -1,0 +1,17 @@
+language: python
+matrix:
+  include:
+  - python: 3.7
+  - python: 3.8
+    sudo: true
+    dist: xenial
+install:
+- pip install --upgrade .
+env:
+- API_URL=https://staging.quantum-inspire.com
+script:
+- echo "running examples"
+- bash select_examples_to_execute.sh
+- echo "running notebooks"
+- jupyter --version
+- bash select_notebooks_to_execute.sh
