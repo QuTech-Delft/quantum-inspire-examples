@@ -26,6 +26,7 @@ author = 'QuTech'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'nbsphinx',
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
     'sphinx_rtd_theme',
@@ -33,8 +34,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.autosummary',
     'jupyter_sphinx',
-    'sphinx_copybutton',
-    'nbsphinx'
+    'sphinx_copybutton'
 ]
 extensions += ['sphinx.ext.intersphinx']
 extensions += ['sphinx.ext.autosectionlabel']

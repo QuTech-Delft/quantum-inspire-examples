@@ -36,27 +36,25 @@ def get_authentication():
         return get_basic_authentication(email, password)
 
 
-if __name__ == '__main__':
+project_name = 'ProjectQ-entangle'
+authentication = get_authentication()
+qi_api = QuantumInspireAPI(QI_URL, authentication, project_name=project_name)
+qi_backend = QIBackend(quantum_inspire_api=qi_api)
 
-    project_name = 'ProjectQ-entangle'
-    authentication = get_authentication()
-    qi_api = QuantumInspireAPI(QI_URL, authentication, project_name=project_name)
-    qi_backend = QIBackend(quantum_inspire_api=qi_api)
+compiler_engines = restrictedgateset.get_engine_list(one_qubit_gates=qi_backend.one_qubit_gates,
+                                                     two_qubit_gates=qi_backend.two_qubit_gates)
+compiler_engines.extend([ResourceCounter()])
+engine = MainEngine(backend=qi_backend, engine_list=compiler_engines)
 
-    compiler_engines = restrictedgateset.get_engine_list(one_qubit_gates=qi_backend.one_qubit_gates,
-                                                         two_qubit_gates=qi_backend.two_qubit_gates)
-    compiler_engines.extend([ResourceCounter()])
-    engine = MainEngine(backend=qi_backend, engine_list=compiler_engines)
+qubits = engine.allocate_qureg(2)
+q1 = qubits[0]
+q2 = qubits[1]
 
-    qubits = engine.allocate_qureg(2)
-    q1 = qubits[0]
-    q2 = qubits[1]
+H | q1
+CNOT | (q1, q2)
+All(Measure) | qubits
 
-    H | q1
-    CNOT | (q1, q2)
-    All(Measure) | qubits
+engine.flush()
 
-    engine.flush()
-
-    print('\nMeasured: {0}'.format([int(q) for q in qubits]))
-    print('Probabilities {0}'.format(qi_backend.get_probabilities(qubits)))
+print('\nMeasured: {0}'.format([int(q) for q in qubits]))
+print('Probabilities {0}'.format(qi_backend.get_probabilities(qubits)))

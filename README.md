@@ -44,6 +44,8 @@ cd docs
 make html
 ```
 
+The documentation is then build in 'docs/_build/html' and can be viewed [here](docs/_build/html/index.html).
+
 ## Running
 
 For example usage see the python scripts in the [docs/examples/](docs/examples/) directory
