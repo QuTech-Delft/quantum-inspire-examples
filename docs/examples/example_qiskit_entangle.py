@@ -43,9 +43,8 @@ def get_authentication():
         return get_basic_authentication(email, password)
 
 
-project_name = 'Qiskit-entangle'
 authentication = get_authentication()
-QI.set_authentication(authentication, QI_URL, project_name=project_name)
+QI.set_authentication(authentication, QI_URL)
 qi_backend = QI.get_backend('QX single-node simulator')
 
 q = QuantumRegister(2)
