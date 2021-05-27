@@ -3,7 +3,7 @@ Quantum Inspire Examples
 
 Hello, and welcome to the Quantum Inspire Examples.
 
-The examples mainly consist of iPython notebooks and python scripts.
+The examples mainly consist of IPython notebooks and python scripts.
 
 Documentation
 =============

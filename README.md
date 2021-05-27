@@ -1,6 +1,6 @@
 # Quantum Inspire Examples
 
-The Quantum Inspire Examples consists of a number of iPython notebooks and python scripts with a diverse set of Quantum
+The Quantum Inspire Examples consists of a number of IPython notebooks and python scripts with a diverse set of Quantum
 algorithms that illustrate the possibilities of the Quantum Inspire platform to run more complex algorithms.
 The Quantum Inspire examples make use of:
 
@@ -64,10 +64,10 @@ or when you want to choose which example notebook to run from the browser do:
 jupyter notebook --notebook-dir="docs/notebooks"
 ```
 
-and select an ipython notebook (file with extension `ipynb`) to run from one of the directories.
+and select an IPython notebook (file with extension `ipynb`) to run from one of the directories.
 
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/QuTech-Delft/quantum-inspire-examples/master?filepath=docs/notebooks)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/QuTech-Delft/quantum-inspire-examples/dev?filepath=docs/notebooks)
 
 Another way to browse and run the available notebooks is by clicking the 'launch binder' button above.
 

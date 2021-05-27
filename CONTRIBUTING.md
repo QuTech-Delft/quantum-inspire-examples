@@ -21,7 +21,7 @@ Additional notebooks can be added to the /docs/notebooks directory.
 
 ### Uploading other examples
 
-Additions not in the form of an iPython notebook can added to the /docs/examples directory.
+Additions not in the form of an IPython notebook can be added to the /docs/examples directory.
 
 ## Code style
 
