@@ -13,6 +13,7 @@ Documentation
 
    introduction
    examplenotebooks
+   examples
    contributing
 
 License

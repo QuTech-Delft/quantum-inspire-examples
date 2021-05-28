@@ -10,9 +10,8 @@ from projectq.ops import CNOT, H, Measure, All
 from projectq.setups import restrictedgateset
 
 from quantuminspire.api import QuantumInspireAPI
+from quantuminspire.credentials import get_authentication
 from quantuminspire.projectq.backend_qx import QIBackend
-
-from tools.credentials import get_authentication
 
 QI_URL = os.getenv('API_URL', 'https://api.quantum-inspire.com/')
 
