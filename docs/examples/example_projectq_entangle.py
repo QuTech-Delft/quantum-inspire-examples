@@ -9,8 +9,9 @@ from projectq.backends import ResourceCounter
 from projectq.ops import CNOT, H, Measure, All
 from projectq.setups import restrictedgateset
 
+from tools.credentials import get_authentication
+
 from quantuminspire.api import QuantumInspireAPI
-from quantuminspire.credentials import get_authentication
 from quantuminspire.projectq.backend_qx import QIBackend
 
 QI_URL = os.getenv('API_URL', 'https://api.quantum-inspire.com/')

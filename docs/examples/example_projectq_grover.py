@@ -11,8 +11,9 @@ from projectq.meta import Compute, Control, Loop, Uncompute
 from projectq.ops import CNOT, CZ, All, H, Measure, X, Z
 from projectq.setups import restrictedgateset
 
+from tools.credentials import get_authentication
+
 from quantuminspire.api import QuantumInspireAPI
-from quantuminspire.credentials import get_authentication
 from quantuminspire.projectq.backend_qx import QIBackend
 
 QI_URL = os.getenv('API_URL', 'https://api.quantum-inspire.com/')
