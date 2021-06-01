@@ -1,5 +1,8 @@
 # Quantum Inspire Examples
 
+[![License](https://img.shields.io/github/license/qutech-delft/quantum-inspire-examples.svg?)](https://opensource.org/licenses/Apache-2.0)
+[![Documentation Status](https://readthedocs.org/projects/quantum-inspire-examples/badge/?version=latest)](https://quantum-inspire-examples.readthedocs.io/en/latest/?badge=latest)
+
 The Quantum Inspire Examples consists of a number of IPython notebooks and python scripts with a diverse set of Quantum
 algorithms that illustrate the possibilities of the Quantum Inspire platform to run more complex algorithms.
 The Quantum Inspire examples make use of:
