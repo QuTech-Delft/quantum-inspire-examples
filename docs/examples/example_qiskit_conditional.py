@@ -1,4 +1,4 @@
-"""Example usage of the Quantum Inspire backend with the QisKit SDK.
+"""Example usage of the Quantum Inspire backend with the Qiskit SDK.
 
 A simple example that demonstrates how to use the SDK to create
 a circuit to demonstrate conditional gate execution.
@@ -6,20 +6,19 @@ a circuit to demonstrate conditional gate execution.
 For documentation on how to use Qiskit we refer to
 [https://qiskit.org/](https://qiskit.org/).
 
-Specific to Quantum Inspire is the creation of the QI instance, which is used to set the authentication of the user and
-provides a Quantum Inspire backend that is used to execute the circuit.
+Specific to Quantum Inspire is the creation of the QI instance, which is used to set the authentication
+of the user and provides a Quantum Inspire backend that is used to execute the circuit.
 
 Copyright 2018-19 QuTech Delft. Licensed under the Apache License, Version 2.0.
 """
 import os
 
-from qiskit import BasicAer
+from qiskit import BasicAer, execute
 from qiskit.circuit import QuantumRegister, ClassicalRegister, QuantumCircuit
-from qiskit import execute
-
-from quantuminspire.qiskit import QI
 
 from tools.credentials import get_authentication
+
+from quantuminspire.qiskit import QI
 
 QI_URL = os.getenv('API_URL', 'https://api.quantum-inspire.com/')
 

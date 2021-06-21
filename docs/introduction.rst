@@ -3,7 +3,7 @@ Introduction
 
 Welcome to the Quantum Inspire Examples. This introduction will shortly introduce the repository, and it will guide you through the structure, installation process and how to contribute. We look forward to working with you!
 
-The Quantum Inspire Examples consist of a number of iPython notebooks and python scripts with a diverse set of
+The Quantum Inspire Examples consist of a number of Jupyter notebooks and python scripts with a diverse set of
 Quantum algorithms that illustrate the possibilities of the Quantum Inspire platform to run more complex algorithms.
 The Quantum Inspire examples make use of:
 
@@ -55,6 +55,8 @@ To build the 'readthedocs' documentation do:
     cd docs
     make html
 
+The documentation is then build in 'docs/_build/html'.
+
 Running
 -------
 
@@ -75,7 +77,7 @@ or when you want to choose which example notebook to run from the browser do:
 
     jupyter notebook --notebook-dir="docs/notebooks"
 
-and select an ipython notebook (file with extension ``ipynb``) to run from one of the directories.
+and select a Jupyter notebook (file with extension ``ipynb``) to run from one of the directories.
 
 Configure your token credentials for Quantum Inspire
 ----------------------------------------------------

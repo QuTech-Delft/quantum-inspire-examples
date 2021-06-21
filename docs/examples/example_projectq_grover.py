@@ -11,10 +11,10 @@ from projectq.meta import Compute, Control, Loop, Uncompute
 from projectq.ops import CNOT, CZ, All, H, Measure, X, Z
 from projectq.setups import restrictedgateset
 
+from tools.credentials import get_authentication
+
 from quantuminspire.api import QuantumInspireAPI
 from quantuminspire.projectq.backend_qx import QIBackend
-
-from tools.credentials import get_authentication
 
 QI_URL = os.getenv('API_URL', 'https://api.quantum-inspire.com/')
 
@@ -88,7 +88,7 @@ def alternating_bits_oracle(eng, qubits, output):
     Uncompute(eng)
 
 
-# Remote Quantum-Inspire backend #
+# Remote Quantum-Inspire backend
 authentication = get_authentication()
 qi = QuantumInspireAPI(QI_URL, authentication)
 qi_backend = QIBackend(quantum_inspire_api=qi)
@@ -103,7 +103,7 @@ qi_engine = MainEngine(backend=qi_backend, engine_list=compiler_engines)
 result_qi = run_grover(qi_engine, 3, alternating_bits_oracle)
 print("\nResult from the remote Quantum-Inspire backend: {}".format(result_qi))
 
-# Local ProjectQ simulator backend #
+# Local ProjectQ simulator backend
 compiler_engines = restrictedgateset.get_engine_list(one_qubit_gates="any", two_qubit_gates=(CNOT, CZ))
 compiler_engines.append(ResourceCounter())
 local_engine = MainEngine(Simulator(), compiler_engines)

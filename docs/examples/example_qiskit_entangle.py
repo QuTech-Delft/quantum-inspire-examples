@@ -1,32 +1,32 @@
-"""Example usage of the Quantum Inspire backend with the QisKit SDK.
+"""Example usage of the Quantum Inspire backend with the Qiskit SDK.
 
 A simple example that demonstrates how to use the SDK to create
 a circuit to create a Bell state, and simulate the circuit on
 Quantum Inspire.
 
-For documentation on how to use QisKit we refer to
+For documentation on how to use Qiskit we refer to
 [https://qiskit.org/](https://qiskit.org/).
 
-Specific to Quantum Inspire is the creation of the QI instance, which is used to set the authentication of the user and
-provides a Quantum Inspire backend that is used to execute the circuit.
-
+Specific to Quantum Inspire is the creation of the QI instance, which is used to set the authentication
+of the user and provides a Quantum Inspire backend that is used to execute the circuit.
 
 Copyright 2018-19 QuTech Delft. Licensed under the Apache License, Version 2.0.
 """
 import os
 
-from qiskit.circuit import QuantumRegister, ClassicalRegister, QuantumCircuit
 from qiskit import execute
-
-from quantuminspire.qiskit import QI
+from qiskit.circuit import QuantumRegister, ClassicalRegister, QuantumCircuit
 
 from tools.credentials import get_authentication
+
+from quantuminspire.qiskit import QI
 
 QI_URL = os.getenv('API_URL', 'https://api.quantum-inspire.com/')
 
 
+project_name = 'Qiskit-entangle'
 authentication = get_authentication()
-QI.set_authentication(authentication, QI_URL)
+QI.set_authentication(authentication, QI_URL, project_name=project_name)
 qi_backend = QI.get_backend('QX single-node simulator')
 
 q = QuantumRegister(2)

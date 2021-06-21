@@ -1,5 +1,5 @@
-from src.sat_utilities import *
 from src.optimizer import *
+from src.sat_utilities import *
 import math
 
 
