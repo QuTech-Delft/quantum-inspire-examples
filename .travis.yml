@@ -11,9 +11,7 @@ env:
 - API_URL=https://staging.quantum-inspire.com
 script:
 - if [ $TRAVIS_PULL_REQUEST == "false" ]; then
-    echo "running examples";
     bash select_examples_to_execute.sh;
-    echo "running notebooks";
     jupyter --version;
     bash select_notebooks_to_execute.sh;
   fi
