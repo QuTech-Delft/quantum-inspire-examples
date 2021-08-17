@@ -27,11 +27,9 @@ jobs:
           pip install --upgrade .
       - name: Run Tests
         run: |
-          echo "running examples"
-          select_examples_to_execute.sh
-          echo "running example notebooks"
+          bash select_examples_to_execute.sh
           jupyter --version
-          select_notebooks_to_execute.sh
+          bash select_notebooks_to_execute.sh
         shell: bash
         env:
           API_URL: https://staging.quantum-inspire.com
