@@ -33,3 +33,4 @@ jobs:
         shell: bash
         env:
           API_URL: https://staging.quantum-inspire.com
+          QI_TOKEN: ${{ secrets.QI_TOKEN }}
