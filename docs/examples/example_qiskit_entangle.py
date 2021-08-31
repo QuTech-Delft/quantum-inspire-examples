@@ -17,8 +17,7 @@ import os
 from qiskit import execute
 from qiskit.circuit import QuantumRegister, ClassicalRegister, QuantumCircuit
 
-from tools.credentials import get_authentication
-
+from quantuminspire.credentials import get_authentication
 from quantuminspire.qiskit import QI
 
 QI_URL = os.getenv('API_URL', 'https://api.quantum-inspire.com/')
