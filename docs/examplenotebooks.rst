@@ -25,4 +25,14 @@ Classifier examples
     notebooks/classifier_example/classification_example2_4_data_points.ipynb
     notebooks/classifier_example/classification_example3_4_features.ipynb
 
+Knowledgebase code examples
+-------------------
+
+.. toctree::
+    :maxdepth: 3
+    :titlesonly:
+    :glob:
+
+    notebooks/measurement-error-mitigation.ipynb
+
 Back to the :doc:`main page <index>`.
