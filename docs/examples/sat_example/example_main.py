@@ -1,8 +1,7 @@
 import os
 
 from quantuminspire.api import QuantumInspireAPI
-
-from tools.credentials import get_authentication
+from quantuminspire.credentials import get_authentication
 
 from src.run import generate_sat_qasm, execute_sat_qasm
 
