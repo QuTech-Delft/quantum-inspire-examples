@@ -1,0 +1,3 @@
+[submodule "docs/notebooks/mit_iquhack"]
+	path = docs/notebooks/mit_iquhack
+	url = https://github.com/iQuHACK/2022_qutech_challenge
