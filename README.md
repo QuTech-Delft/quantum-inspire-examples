@@ -23,6 +23,7 @@ The source for the Quantum Inspire examples can be found at Github. For the defa
 ```
 git clone https://github.com/QuTech-Delft/quantum-inspire-examples
 cd quantum-inspire-examples
+git submodule update --init
 pip install .
 ```
 
