@@ -58,7 +58,7 @@ setup(name='quantum-inspire-examples',
       license='Apache 2.0',
       packages=[],
       install_requires=['boolean.py', 'jupyter', 'matplotlib>=3.0', 'numpy>=1.20', 'projectq>=0.4', 'qiskit>=0.20.0',
-                        'nbimporter', 'quantuminspire', 'rich'],
+                        'nbimporter', 'quantuminspire', 'rich', 'qtt'],
       extras_require={
           'rtd': ['sphinx', 'sphinx-rtd-theme', 'jupyter-sphinx', 'nbsphinx', 'sphinx-automodapi',
                   'sphinx-copybutton'],
