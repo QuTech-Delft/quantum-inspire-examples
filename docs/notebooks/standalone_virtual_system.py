@@ -16,6 +16,7 @@ from qcodes import Instrument, find_or_create_instrument
 from qtt.instrument_drivers.gates import VirtualDAC
 from qtt.instrument_drivers.virtual_instruments import VirtualIVVI, VirtualMeter
 import termcolor
+from quantify_core.data.handling import to_gridded_dataset
 
 
 class ReprMixin(metaclass=ABCMeta):
