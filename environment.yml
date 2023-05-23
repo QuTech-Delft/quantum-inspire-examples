@@ -1,0 +1,11 @@
+name: qtc
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - matplotlib
+  - scipy
+  - qtt
+  - pydantic
+  - termcolor
