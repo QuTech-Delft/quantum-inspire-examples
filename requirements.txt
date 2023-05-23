@@ -1,0 +1,8 @@
+numpy 
+matplotlib
+jupyter
+qtt
+rich
+termcolor
+pydantic
+
