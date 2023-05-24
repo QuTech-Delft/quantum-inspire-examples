@@ -1548,9 +1548,10 @@ from matplotlib.axes import Axes
 from qtt.utilities.visualization import get_axis
 from quantify_core.visualization import mpl_plotting as qpl
 from quantify_core.visualization.SI_utilities import adjust_axeslabels_SI, set_cbarlabel, set_xlabel, set_ylabel
+import qcodes_loop.data
 
-QcodesDataSet = qcodes.data.data_set.DataSet
-FDataSet = Union[xarray.Dataset, qcodes.data.data_set.DataSet, xarray.DataArray]
+QcodesDataSet = qcodes_loop.data.data_set.DataSet
+FDataSet = Union[xarray.Dataset, QcodesDataSet, xarray.DataArray]
 XDataSet = Union[xarray.Dataset, xarray.DataArray]
 
 
@@ -1558,7 +1559,7 @@ XDataSet = Union[xarray.Dataset, xarray.DataArray]
 
 def default_data_variable(dataset: FDataSet) -> str:
     """Return default data variable"""
-    if isinstance(dataset, qcodes.data.data_set.DataSet):
+    if isinstance(dataset, QcodesDataSet):
         return dataset.default_parameter_name()
     else:
         return list(dataset.data_vars)[0]
@@ -1566,7 +1567,7 @@ def default_data_variable(dataset: FDataSet) -> str:
 
 def default_coords(dataset: FDataSet) -> List[str]:
     """Return the default coordinates as a list of strings"""
-    if isinstance(dataset, qcodes.data.data_set.DataSet):
+    if isinstance(dataset, QcodesDataSet):
         dv = default_data_variable(dataset)
         set_arrays = dataset.arrays[dv].set_arrays
         return [s.array_id for s in set_arrays]
