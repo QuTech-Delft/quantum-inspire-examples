@@ -5,6 +5,8 @@ import random
 import matplotlib.pyplot as plt
 import math
 
+from quantuminspire.api import V1_MEASUREMENT_BLOCK_INDEX
+
 
 def apply(gate, qubit):
     """
@@ -219,7 +221,7 @@ def interpret_results(result_dict, qubit_count, data_qubits, plot=True):
         # find result in dictionary and add to list of bars
         # zero-valued bars don't show up in the dictionary, hence the try-except
         try:
-            bar = result_dict["histogram"][str(i)]
+            bar = result_dict["histogram"][V1_MEASUREMENT_BLOCK_INDEX][str(i)]
         except KeyError:
             bar = 0
 
